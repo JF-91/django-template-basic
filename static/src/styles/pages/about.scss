@@ -1,0 +1,133 @@
+@use "../abstracts" as *;
+@use "sass:color";
+@use "../components/button" as *;
+
+/* ----------------------------------------
+ * About Page Styles
+ * -------------------------------------- */
+
+.about {
+  padding: $spacing-lg 0;
+
+  /* Introduction Section */
+  .about-intro {
+    background-color: $color-bg-body;
+    padding: $spacing-xl 0;
+    text-align: center;
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: $color-text-dark;
+      margin-bottom: $spacing-md;
+    }
+
+    p {
+      font-size: 1.25rem;
+      color: $color-text-muted;
+      margin-bottom: $spacing-lg;
+    }
+
+    .btn-primary {
+      font-size: 1.1rem;
+      padding: $spacing-sm $spacing-lg;
+      margin-top: $spacing-lg;
+    }
+  }
+
+  /* Our Mission Section */
+  .our-mission {
+    background-color: $color-text-light;
+    color: $color-text-dark;
+    padding: $spacing-xl 0;
+    text-align: center;
+
+    h2 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      margin-bottom: $spacing-lg;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: $color-text-muted;
+      max-width: 900px;
+      margin: 0 auto $spacing-lg;
+    }
+  }
+
+  /* Team Section */
+  .team {
+    background-color: $color-bg-body;
+    padding: $spacing-xl 0;
+    text-align: center;
+
+    h2 {
+      font-size: 2.25rem;
+      margin-bottom: $spacing-md;
+    }
+
+    .team-members {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: $spacing-lg;
+
+      .team-member {
+        background-color: $color-text-light;
+        padding: $spacing-md;
+        border-radius: $border-radius;
+        box-shadow: 0 2px 4px rgba($color-text-dark, 0.1);
+        text-align: center;
+        transition: all 0.2s ease;
+
+        &:hover {
+          box-shadow: 0 4px 8px rgba($color-text-dark, 0.15);
+          transform: translateY(-5px);
+        }
+
+        .team-member-photo {
+          width: 120px;
+          height: 120px;
+          border-radius: 50%;
+          margin-bottom: $spacing-md;
+          object-fit: cover;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: $spacing-xs;
+        }
+
+        p {
+          font-size: 1rem;
+          color: $color-text-muted;
+        }
+      }
+    }
+  }
+
+  /* Contact Section */
+  .contact-info {
+    background-color: $color-primary;
+    color: $color-text-light;
+    padding: $spacing-xl 0;
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: $spacing-lg;
+    }
+
+    .contact-details {
+      font-size: 1.2rem;
+      color: $color-text-light;
+      margin-bottom: $spacing-md;
+    }
+
+    .cta-btn {
+      font-size: 1.2rem;
+      padding: $spacing-sm $spacing-lg;
+      margin-top: $spacing-md;
+    }
+  }
+}

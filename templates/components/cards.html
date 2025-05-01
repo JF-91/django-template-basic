@@ -1,0 +1,81 @@
+{% extends "components/base.html" %} {% block title %}Tarjetas{% endblock %} {%
+block content %}
+<div class="container" style="padding: 2rem">
+  <h1>Componentes de Tarjetas</h1>
+
+  <section style="margin: 2rem 0">
+    <h2>Tarjeta Básica</h2>
+    <div class="card" style="max-width: 400px">
+      <div class="card-header">Título de la Tarjeta</div>
+      <div class="card-body">
+        <p>
+          Este es un ejemplo de una tarjeta básica con un encabezado, cuerpo y
+          pie de página.
+        </p>
+      </div>
+      <div class="card-footer">
+        <button class="btn btn-primary">Acción</button>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin: 2rem 0">
+    <h2>Tarjeta con Imagen</h2>
+    <div class="card card-image" style="max-width: 400px">
+      <img
+        src="https://via.placeholder.com/400x200"
+        alt="Imagen de ejemplo"
+        class="card-img"
+      />
+      <div class="card-body">
+        <h3>Título de la Tarjeta</h3>
+        <p>Esta tarjeta incluye una imagen en la parte superior.</p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin: 2rem 0">
+    <h2>Tarjeta Invertida</h2>
+    <div class="card card-reversed" style="max-width: 600px">
+      <div class="card-header">Lateral</div>
+      <div class="card-body">
+        <h3>Título de la Tarjeta</h3>
+        <p>
+          Esta tarjeta tiene un diseño invertido con el encabezado en el
+          lateral.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section style="margin: 2rem 0">
+    <h2>Tarjetas en Grid</h2>
+    <div
+      style="
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 1rem;
+      "
+    >
+      <div class="card">
+        <div class="card-header">Tarjeta 1</div>
+        <div class="card-body">
+          <p>Contenido de la tarjeta 1.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Tarjeta 2</div>
+        <div class="card-body">
+          <p>Contenido de la tarjeta 2.</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header">Tarjeta 3</div>
+        <div class="card-body">
+          <p>Contenido de la tarjeta 3.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock %}

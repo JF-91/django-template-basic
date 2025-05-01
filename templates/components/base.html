@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}Componentes{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'dist/css/main.css' %}" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">Mi Sitio</div>
+        <nav>
+          <a href="/">Inicio</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>{% block content %}{% endblock %}</main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-section">
+          <h3>Acerca de</h3>
+          <ul>
+            <li><a href="/about">Nuestra Historia</a></li>
+            <li><a href="/team">Equipo</a></li>
+            <li><a href="/careers">Carreras</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Servicios</h3>
+          <ul>
+            <li><a href="/services">Servicios</a></li>
+            <li><a href="/products">Productos</a></li>
+            <li><a href="/support">Soporte</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+            <li><a href="/contact">Contacto</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/privacy">Privacidad</a></li>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 Mi Sitio. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

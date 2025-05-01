@@ -1,0 +1,43 @@
+{% extends "components/base.html" %} {% block title %}Botones{% endblock %} {%
+block content %}
+<div class="container" style="padding: 2rem">
+  <h1>Componentes de Botones</h1>
+
+  <section style="margin: 2rem 0">
+    <h2>Botones Básicos</h2>
+    <div style="display: flex; gap: 1rem; margin: 1rem 0">
+      <button class="btn btn-primary">Botón Primario</button>
+      <button class="btn btn-secondary">Botón Secundario</button>
+      <button class="btn btn-success">Botón Éxito</button>
+      <button class="btn btn-danger">Botón Peligro</button>
+    </div>
+  </section>
+
+  <section style="margin: 2rem 0">
+    <h2>Botones Outline</h2>
+    <div style="display: flex; gap: 1rem; margin: 1rem 0">
+      <button class="btn btn-outline btn-primary">Outline Primario</button>
+      <button class="btn btn-outline btn-secondary">Outline Secundario</button>
+    </div>
+  </section>
+
+  <section style="margin: 2rem 0">
+    <h2>Tamaños de Botones</h2>
+    <div style="display: flex; gap: 1rem; margin: 1rem 0">
+      <button class="btn btn-primary btn-sm">Botón Pequeño</button>
+      <button class="btn btn-primary">Botón Normal</button>
+      <button class="btn btn-primary btn-lg">Botón Grande</button>
+    </div>
+  </section>
+
+  <section style="margin: 2rem 0">
+    <h2>Botones Deshabilitados</h2>
+    <div style="display: flex; gap: 1rem; margin: 1rem 0">
+      <button class="btn btn-primary" disabled>Botón Deshabilitado</button>
+      <button class="btn btn-outline btn-primary" disabled>
+        Outline Deshabilitado
+      </button>
+    </div>
+  </section>
+</div>
+{% endblock %}

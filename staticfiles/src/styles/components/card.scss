@@ -1,0 +1,94 @@
+@use "../abstracts" as *;
+@use "sass:color";
+
+/* ----------------------------------------
+ * Card Component
+ * -------------------------------------- */
+
+.card {
+  background-color: $color-text-light;
+  border-radius: $border-radius;
+  box-shadow: 0 2px 4px rgba($color-text-dark, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+
+  /* Hover effect */
+  &:hover {
+    box-shadow: 0 4px 8px rgba($color-text-dark, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .card-header {
+    background-color: $color-primary;
+    padding: $spacing-sm $spacing-md;
+    font-size: $font-size-lg;
+    font-weight: bold;
+    color: $color-text-light;
+  }
+
+  .card-body {
+    padding: $spacing-md;
+    font-size: $font-size-base;
+    color: $color-text-main;
+    flex-grow: 1;
+
+    p {
+      margin-bottom: $spacing-sm;
+    }
+  }
+
+  .card-footer {
+    background-color: rgba($color-text-dark, 0.05);
+    padding: $spacing-sm $spacing-md;
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid rgba($color-text-dark, 0.1);
+
+    .btn {
+      margin-left: $spacing-sm;
+    }
+  }
+
+  &.card-image {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    .card-body {
+      grid-row: 2;
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 1px solid rgba($color-text-dark, 0.1);
+    }
+  }
+
+  &.card-reversed {
+    flex-direction: row-reverse;
+
+    .card-header {
+      flex-basis: 20%;
+    }
+
+    .card-body {
+      flex-grow: 1;
+    }
+  }
+
+  /* Card with image */
+  &.card-image {
+    .card-body {
+      padding: $spacing-md;
+    }
+
+    .card-img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid rgba($color-text-dark, 0.1);
+    }
+  }
+}

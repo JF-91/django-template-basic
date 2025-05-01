@@ -1,0 +1,77 @@
+@use "../abstracts" as *;
+
+/* ----------------------------------------
+ * Site Footer
+ * -------------------------------------- */
+
+footer {
+  padding: $spacing-lg 0;
+  background-color: $color-text-dark;
+  color: $color-text-light;
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-lg;
+  }
+
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+
+    h3 {
+      font-size: $font-size-lg;
+      margin-bottom: $spacing-md;
+      color: $color-text-light;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: $spacing-sm;
+      }
+
+      a {
+        color: $color-text-muted;
+        text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+          color: $color-text-light;
+        }
+      }
+    }
+  }
+
+  .footer-bottom {
+    width: 100%;
+    margin-top: $spacing-lg;
+    padding-top: $spacing-md;
+    border-top: 1px solid rgba($color-text-light, 0.1);
+    text-align: center;
+    color: $color-text-muted;
+  }
+}
+
+/* ----------------------------------------
+ * Responsive Footer
+ * -------------------------------------- */
+
+@media (max-width: $breakpoint-md) {
+  footer {
+    .container {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+
+    .footer-section {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,112 @@
+@use "../abstracts" as *;
+@use "sass:color";
+
+/* ----------------------------------------
+ * Button Component
+ * -------------------------------------- */
+
+.btn {
+  display: inline-block;
+  padding: $spacing-xs $spacing-md;
+  font-size: $font-size-base;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  transition: all 0.2s ease-in-out;
+
+  // Primary button
+  &-primary {
+    background-color: $color-primary;
+    color: $color-text-light;
+
+    &:hover {
+      background-color: color.adjust($color-primary, $lightness: -10%);
+    }
+  }
+
+  // Secondary button
+  &-secondary {
+    background-color: $color-secondary;
+    color: $color-text-light;
+
+    &:hover {
+      background-color: color.adjust($color-secondary, $lightness: -10%);
+    }
+  }
+
+  // Success button
+  &-success {
+    background-color: $color-success;
+    color: $color-text-light;
+
+    &:hover {
+      background-color: color.adjust($color-success, $lightness: -10%);
+    }
+  }
+
+  // Danger button
+  &-danger {
+    background-color: $color-danger;
+    color: $color-text-light;
+
+    &:hover {
+      background-color: color.adjust($color-danger, $lightness: -10%);
+    }
+  }
+
+  // Outline buttons
+  &-outline {
+    background-color: transparent;
+    border-width: 1px;
+    border-style: solid;
+
+    &.btn-primary {
+      border-color: $color-primary;
+      color: $color-primary;
+
+      &:hover {
+        background-color: $color-primary;
+        color: $color-text-light;
+      }
+    }
+
+    &.btn-secondary {
+      border-color: $color-secondary;
+      color: $color-secondary;
+
+      &:hover {
+        background-color: $color-secondary;
+        color: $color-text-light;
+      }
+    }
+  }
+
+  // Button sizes
+  &-sm {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-size-sm;
+  }
+
+  &-lg {
+    padding: $spacing-sm $spacing-lg;
+    font-size: $font-size-lg;
+  }
+
+  // Disabled state
+  &:disabled {
+    opacity: 0.65;
+    pointer-events: none;
+  }
+}
+
+/* Focus state for accessibility */
+.btn:focus {
+  outline: 2px solid $color-primary;
+  outline-offset: 2px;
+}

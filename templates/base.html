@@ -1,0 +1,54 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <!-- Título de la página -->
+    <title>{% block title %}Mi Proyecto Django{% endblock %}</title>
+
+    <!-- Favicon -->
+
+    <!-- Enlace a la hoja de estilos (SASS compilado a CSS) -->
+    <link rel="stylesheet" href="{% static 'dist/main.css' %}">
+
+    <!-- Otros enlaces a hojas de estilo externas (por ejemplo, Google Fonts) -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    {% block head %}
+    <!-- Espacio para incluir más elementos en el encabezado si es necesario -->
+    {% endblock %}
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Aquí irá el contenido específico de cada página -->
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Mi Proyecto. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Scripts JS comunes -->
+    <script src="{% static 'js/main.js' %}"></script>
+
+    {% block scripts %}
+    <!-- Espacio para incluir scripts específicos de cada página -->
+    {% endblock %}
+</body>
+
+</html>
