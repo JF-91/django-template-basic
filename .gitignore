@@ -1,3 +1,35 @@
 .env
 package-lock.json
 node_modules/
+
+# Entornos virtuales
+venv/
+env/
+
+# Archivos de Python compilados
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de configuración local
+*.env
+*.local
+*.log
+*.sqlite3
+.DS_Store
+.idea/
+.vscode/
+*.bak
+*.swp
+
+# Archivos de tests
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.cache/
+
+# Jupyter notebooks temporales
+.ipynb_checkpoints/
